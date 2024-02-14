@@ -1,5 +1,6 @@
 import styles from "./weatherMainInfo.module.css";
 
+// app para mostrar toda la información de la busqueda
 export default function WeatherMainInfo({ weather }) {
   return (
     <div className={styles.mainInfo}>
