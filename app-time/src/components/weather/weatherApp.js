@@ -3,6 +3,7 @@ import Loading from "./loading";
 import WeatherForm from "./weatherForm";
 import WeatherMainInfo from "./weatherMainInfo";
 
+// importe de modules.css 
 import styles from "./weatherApp.module.css";
 // creación de la aplicacion weather
 export default function WeatherApp() {
@@ -31,8 +32,9 @@ export default function WeatherApp() {
       const json = await request.json();
       console.log(json);
 
+      // Se añade un timer de 2 segundos y se actualiza weather con las propiedades recibidas por json
       setTimeout(() => {
-        setWeather({ ...json }); //3 puntos?
+        setWeather({ ...json });
       }, 2000);
     } catch (e) {
       console.error(e);
